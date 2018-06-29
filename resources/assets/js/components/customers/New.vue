@@ -5,19 +5,19 @@
                 <tr>
                     <th>Name</th>
                     <td>
-                        <input type="text" class="form-control" v-model="customer.name" placeholder="Customer Name"/>
+                        <input type="text" class="form-control" v-model="customer.name" />
                     </td>
                 </tr>
                 <tr>
                     <th>Email</th>
                     <td>
-                        <input type="email" class="form-control" v-model="customer.email" placeholder="Customer Email"/>
+                        <input type="email" class="form-control" v-model="customer.email" />
                     </td>
                 </tr>
                 <tr>
                     <th>Phone</th>
                     <td>
-                        <input type="text" class="form-control" v-model="customer.phone" placeholder="Customer Phone"/>
+                        <input type="text" class="form-control" v-model="customer.phone"/>
                     </td>
                 </tr>
                 <tr>
@@ -70,6 +70,7 @@
                 }
                 axios.post('/api/customers/new', this.$data.customer)
                     .then((response) => {
+                        this.$store.dispatch('getCustomers');
                         this.$router.push('/dashboard');
                     });
             },

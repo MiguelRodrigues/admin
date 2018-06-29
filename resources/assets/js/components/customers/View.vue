@@ -10,7 +10,7 @@
                     <td>{{ customer.id }}</td>
                 </tr>
                 <tr>
-                    <th>Name</th>
+                    <th>Nome</th>
                     <td>{{ customer.name }}</td>
                 </tr>
                 <tr>
@@ -18,7 +18,7 @@
                     <td>{{ customer.email }}</td>
                 </tr>
                 <tr>
-                    <th>Phone</th>
+                    <th>Telemovel</th>
                     <td>{{ customer.phone }}</td>
                 </tr>
             </table>

@@ -1,2 +1,1 @@
-# admin
-admin desc
+ginasios

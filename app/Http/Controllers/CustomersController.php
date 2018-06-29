@@ -26,4 +26,37 @@ class CustomersController extends Controller
             "customer" => $customer
         ], 200);
     }
+    public function edit(CreateCustomerRequest $request, $id)
+    {
+       
+        $customer = Customer::find($id);
+        $customer->name = $request->name;
+        $customer->email = $request->email;
+        $customer->phone = $request->phone;
+
+        $customer->save();
+        
+
+        return response()->json([
+            "customer" => $customer
+        ], 200);
+    }
+    public function delete(Request $request,$id)
+    {
+       
+        
+        if(Customer::findOrFail($id)->delete()){
+            return response()->json([
+                "customer" => "Nice!!"
+            ], 200);
+        }else{
+            return response()->json([
+                "customer" => "Asneira"
+            ], 404);
+        }
+      
+        
+
+        
+    }
 }

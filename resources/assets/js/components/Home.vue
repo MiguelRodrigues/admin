@@ -3,8 +3,8 @@
       <header/>
         <div class="row justify-content-center">
                     <div class ="col-md-12" style ="text-align: center;">
-                         <!-- <img src= "img/honey.png" > -->
-                        <!-- <h2>{{ title }}</h2> -->
+                         <img src= "img/honey.png" >
+                        <h2>{{ title }}</h2>
                     </div>
         </div>
         <div>
