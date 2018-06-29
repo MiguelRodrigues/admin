@@ -53019,8 +53019,69 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__customers_List_vue__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__customers_List_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__customers_List_vue__);
+throw new Error("Cannot find module \"../customers/List.vue\"");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -53043,7 +53104,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
 
   name: 'DashBoard',
-  components: { CostumersList: __WEBPACK_IMPORTED_MODULE_0__customers_List_vue___default.a },
+  components: { CustomersList: __WEBPACK_IMPORTED_MODULE_0__customers_List_vue___default.a },
   data: function data() {
 
     return {
@@ -53312,13 +53373,156 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    { attrs: { id: "content" } },
     [
-      _vm._m(0),
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
+        [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-info",
+                attrs: { type: "button", id: "sidebarCollapse" }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "svg-inline--fa fa-align-left fa-w-14",
+                    attrs: {
+                      "aria-hidden": "true",
+                      "data-prefix": "fas",
+                      "data-icon": "align-left",
+                      role: "img",
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 448 512",
+                      "data-fa-i2svg": ""
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        fill: "currentColor",
+                        d:
+                          "M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", [_vm._v("Toggle Sidebar")])
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse navbar-collapse",
+                attrs: { id: "navbarSupportedContent" }
+              },
+              [
+                _c(
+                  "ul",
+                  { staticClass: "navbar-nav ml-auto" },
+                  [
+                    !_vm.currentUser
+                      ? [
+                          _c(
+                            "li",
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "nav-link",
+                                  attrs: { to: "/login" }
+                                },
+                                [_vm._v("Login")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "nav-link",
+                                  attrs: { to: "/register" }
+                                },
+                                [_vm._v("Register")]
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      : [
+                          _c("li", { staticClass: "nav-item dropdown" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "nav-link dropdown-toggle",
+                                attrs: {
+                                  id: "navbarDropdown",
+                                  href: "#",
+                                  role: "button",
+                                  "data-toggle": "dropdown",
+                                  "aria-expanded": "false",
+                                  "aria-haspopup": "true"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                              " +
+                                    _vm._s(_vm.currentUser.name) +
+                                    " "
+                                ),
+                                _c("span", { staticClass: "caret" })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "dropdown-menu",
+                                attrs: { "aria-labelledby": "navbarDropdown" }
+                              },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: { href: "#!" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.logout($event)
+                                      }
+                                    }
+                                  },
+                                  [_vm._v("Logout")]
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                  ],
+                  2
+                )
+              ]
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c("button", { on: { click: _vm.showCustomers } }, [_vm._v("Clientes")]),
       _vm._v(" "),
-      _vm.mostra ? [_c("CostumersList")] : _vm._e()
+      _vm.mostra ? [_c("CustomersList")] : _vm._e()
     ],
     2
   )
@@ -53328,13 +53532,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-12", staticStyle: { "text-align": "center" } },
-        [_vm._v("\n                    DASHBOARD\n                  ")]
-      )
-    ])
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarSupportedContent",
+          "aria-controls": "navbarSupportedContent",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
+    )
   }
 ]
 render._withStripped = true
@@ -55129,7 +55341,7 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(99)
 /* template */
 var __vue_template__ = __webpack_require__(93)
 /* template functional */
@@ -55177,152 +55389,161 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "content" } }, [
-    _c(
-      "nav",
-      { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
-      [
-        _c("div", { staticClass: "container-fluid" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-info",
-              attrs: { type: "button", id: "sidebarCollapse" }
-            },
-            [
-              _c(
-                "svg",
-                {
-                  staticClass: "svg-inline--fa fa-align-left fa-w-14",
-                  attrs: {
-                    "aria-hidden": "true",
-                    "data-prefix": "fas",
-                    "data-icon": "align-left",
-                    role: "img",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 448 512",
-                    "data-fa-i2svg": ""
-                  }
-                },
-                [
-                  _c("path", {
+  return _c(
+    "div",
+    { attrs: { id: "content" } },
+    [
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
+        [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-info",
+                attrs: { type: "button", id: "sidebarCollapse" }
+              },
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "svg-inline--fa fa-align-left fa-w-14",
                     attrs: {
-                      fill: "currentColor",
-                      d:
-                        "M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+                      "aria-hidden": "true",
+                      "data-prefix": "fas",
+                      "data-icon": "align-left",
+                      role: "img",
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 448 512",
+                      "data-fa-i2svg": ""
                     }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c("span", [_vm._v("Toggle Sidebar")])
-            ]
-          ),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "navbarSupportedContent" }
-            },
-            [
-              _c(
-                "ul",
-                { staticClass: "navbar-nav ml-auto" },
-                [
-                  !_vm.currentUser
-                    ? [
-                        _c(
-                          "li",
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "nav-link",
-                                attrs: { to: "/login" }
-                              },
-                              [_vm._v("Login")]
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "li",
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "nav-link",
-                                attrs: { to: "/register" }
-                              },
-                              [_vm._v("Register")]
-                            )
-                          ],
-                          1
-                        )
-                      ]
-                    : [
-                        _c("li", { staticClass: "nav-item dropdown" }, [
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        fill: "currentColor",
+                        d:
+                          "M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("span", [_vm._v("Toggle Sidebar")])
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse navbar-collapse",
+                attrs: { id: "navbarSupportedContent" }
+              },
+              [
+                _c(
+                  "ul",
+                  { staticClass: "navbar-nav ml-auto" },
+                  [
+                    !_vm.currentUser
+                      ? [
                           _c(
-                            "a",
-                            {
-                              staticClass: "nav-link dropdown-toggle",
-                              attrs: {
-                                id: "navbarDropdown",
-                                href: "#",
-                                role: "button",
-                                "data-toggle": "dropdown",
-                                "aria-expanded": "false",
-                                "aria-haspopup": "true"
-                              }
-                            },
+                            "li",
                             [
-                              _vm._v(
-                                "\n                                " +
-                                  _vm._s(_vm.currentUser.name) +
-                                  " "
-                              ),
-                              _c("span", { staticClass: "caret" })
-                            ]
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "nav-link",
+                                  attrs: { to: "/login" }
+                                },
+                                [_vm._v("Login")]
+                              )
+                            ],
+                            1
                           ),
                           _vm._v(" "),
                           _c(
-                            "div",
-                            {
-                              staticClass: "dropdown-menu",
-                              attrs: { "aria-labelledby": "navbarDropdown" }
-                            },
+                            "li",
                             [
                               _c(
-                                "a",
+                                "router-link",
                                 {
-                                  staticClass: "dropdown-item",
-                                  attrs: { href: "#!" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                      return _vm.logout($event)
-                                    }
-                                  }
+                                  staticClass: "nav-link",
+                                  attrs: { to: "/register" }
                                 },
-                                [_vm._v("Logout")]
+                                [_vm._v("Register")]
                               )
-                            ]
+                            ],
+                            1
                           )
-                        ])
-                      ]
-                ],
-                2
-              )
-            ]
-          )
-        ])
-      ]
-    )
-  ])
+                        ]
+                      : [
+                          _c("li", { staticClass: "nav-item dropdown" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "nav-link dropdown-toggle",
+                                attrs: {
+                                  id: "navbarDropdown",
+                                  href: "#",
+                                  role: "button",
+                                  "data-toggle": "dropdown",
+                                  "aria-expanded": "false",
+                                  "aria-haspopup": "true"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                " +
+                                    _vm._s(_vm.currentUser.name) +
+                                    " "
+                                ),
+                                _c("span", { staticClass: "caret" })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "dropdown-menu",
+                                attrs: { "aria-labelledby": "navbarDropdown" }
+                              },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "dropdown-item",
+                                    attrs: { href: "#!" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.logout($event)
+                                      }
+                                    }
+                                  },
+                                  [_vm._v("Logout")]
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                  ],
+                  2
+                )
+              ]
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.showCustomers } }, [_vm._v("Clientes")]),
+      _vm._v(" "),
+      _vm.mostra ? [_c("CustomersList")] : _vm._e()
+    ],
+    2
+  )
 }
 var staticRenderFns = [
   function() {
@@ -55396,6 +55617,118 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__customers_List_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__customers_List_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__customers_List_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+;
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+  name: 'DashBoard',
+  components: { CustomersList: __WEBPACK_IMPORTED_MODULE_0__customers_List_vue___default.a },
+  data: function data() {
+
+    return {
+      mostra: this.$store.getters.componentOpen
+    };
+  },
+
+
+  methods: {
+    showCustomers: function showCustomers() {
+      this.$store.dispatch('toogleComponent');
+      this.mostra = this.$store.getters.componentOpen;
+    }
+  }
+});
 
 /***/ })
 /******/ ]);

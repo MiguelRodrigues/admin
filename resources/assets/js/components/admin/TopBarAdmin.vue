@@ -62,6 +62,13 @@
             </nav>
 
             <!-- MAIN CONTENT -->
+
+            <button @click="showCustomers">Clientes</button>
+
+            <template v-if="mostra">
+            <CustomersList></CustomersList>
+            </template>
+
            
   
 
@@ -69,3 +76,26 @@
         <!-- FIM Page Content  -->
 
 </template>
+
+<script>
+import CustomersList from '../customers/List.vue';;
+export default {
+  
+      name: 'DashBoard',
+      components: {CustomersList},
+      data() {
+        
+        return { 
+		      	mostra: this.$store.getters.componentOpen 
+			      }
+	  	},
+
+      methods:{
+        
+        showCustomers(){
+          this.$store.dispatch('toogleComponent');
+          this.mostra = this.$store.getters.componentOpen;
+          }
+        }
+}
+</script>
