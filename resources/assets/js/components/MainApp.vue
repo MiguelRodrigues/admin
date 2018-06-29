@@ -23,6 +23,6 @@
 
     export default {
         name: 'main-app',
-        components: {Header, SideBar, TopBar, }
+        components: {Header, SideBar, TopBar }
     }
 </script>
