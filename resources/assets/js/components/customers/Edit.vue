@@ -84,7 +84,7 @@
                 axios.post(`/api/customers/edit/${this.$route.params.id}`, this.$data.customer,this.$route.params.id)
                     .then((response) => {
                         this.$store.dispatch('getCustomers');
-                        this.$router.push('/dashboard');
+                        this.$router.push('/listar-clientes');
                     });
             },
             getConstraints() {

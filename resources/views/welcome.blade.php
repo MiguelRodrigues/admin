@@ -15,10 +15,6 @@
 
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
- 
-
-
-
 
       <!-- ADMIN  -->
 
@@ -38,7 +34,7 @@
       <!-- Font Awesome JS -->
       <script defer="" src="js/fontawesome-v5_0_13-solid.js" crossorigin="anonymous"></script>
 
-      <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+      <script defer="" src="js/fontawesome.js" crossorigin="anonymous"></script>
 
 
 

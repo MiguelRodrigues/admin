@@ -53442,7 +53442,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-wrapper[data-v-16525708] {\r\n    text-align: right;\r\n    margin-bottom: 20px;\n}\r\n", ""]);
+exports.push([module.i, "\n.btn-wrapper[data-v-16525708] {\n    text-align: right;\n    margin-bottom: 20px;\n}\n", ""]);
 
 // exports
 
@@ -54112,7 +54112,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.error[data-v-5383a42c] {\r\n    text-align: center;\r\n    color: red;\n}\r\n", ""]);
+exports.push([module.i, "\n.error[data-v-5383a42c] {\n    text-align: center;\n    color: red;\n}\n", ""]);
 
 // exports
 
@@ -54404,7 +54404,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.errors {\r\n    background: lightcoral;\r\n    border-radius:5px;\r\n    padding: 21px 0 2px 0;\n}\r\n", ""]);
+exports.push([module.i, "\n.errors {\n    background: lightcoral;\n    border-radius:5px;\n    padding: 21px 0 2px 0;\n}\n", ""]);
 
 // exports
 
