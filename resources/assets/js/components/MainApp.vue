@@ -1,5 +1,6 @@
 <template>
     <div id="main">
+<<<<<<< Updated upstream
         <template v-if="!currentUser">
             <Header/>
             <!-- MAIN CONTENT -->
@@ -27,6 +28,12 @@
         <!-- <div class="content"> -->
             
         <!-- </div> -->
+=======
+
+        <div class="content">
+            <router-view></router-view>
+        </div>
+>>>>>>> Stashed changes
     </div>
 </template>
 

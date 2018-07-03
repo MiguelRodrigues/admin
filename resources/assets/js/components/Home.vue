@@ -1,7 +1,13 @@
 <template>
   <div class="container">
+<<<<<<< Updated upstream
       <!-- <header/> -->
         <div class="row justify-content-center">
+=======
+        <Header/>
+       <div class="wrapper">
+            <div class="row justify-content-center">
+>>>>>>> Stashed changes
                     <div class ="col-md-12" style ="text-align: center;">
                          <img src= "img/honey.png" >
                         <h2>{{ title }}</h2>
@@ -11,13 +17,24 @@
         <div>
             <button @click="redirectLogin">Login</button>
         </div>
+        </div>
+        
 
     </div>
 </template>
 
 
 <script>
+    import Header from './Header.vue';
+    import SideBar from './admin/SideBarAdmin.vue';
+    import TopBar from './admin/TopBarAdmin.vue';
 export default {
+
+      components: {
+          Header, 
+          SideBar, 
+          TopBar 
+          },
       name: 'home',
       computed: {
             title() {
