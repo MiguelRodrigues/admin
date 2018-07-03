@@ -1,18 +1,18 @@
 <template>
   <div class="container">
       <!-- <header/> -->
-        <div class="row justify-content-center">
+      <div class="row justify-content-center">
                     <div class ="col-md-12" style ="text-align: center;">
                          <img src= "img/honey.png" >
                         <h2>{{ title }}</h2>
                         <h3>Home.vue</h3>
                     </div>
-        </div>
-        <div>
-            <button @click="redirectLogin">Login</button>
-        </div>
+      </div>
+      <div>
+        <button @click="redirectLogin">Login</button>
+      </div>
 
-    </div>
+  </div>
 </template>
 
 

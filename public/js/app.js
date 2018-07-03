@@ -55056,7 +55056,7 @@ var render = function() {
               [
                 _c(
                   "router-link",
-                  { staticClass: "btn", attrs: { to: "/dashboard" } },
+                  { staticClass: "btn", attrs: { to: "/listar-clientes" } },
                   [_vm._v("Cancelar")]
                 )
               ],
@@ -55306,7 +55306,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("router-link", { attrs: { to: "/dashboard" } }, [
+            _c("router-link", { attrs: { to: "/listar-clientes" } }, [
               _vm._v("Voltar")
             ])
           ],

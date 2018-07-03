@@ -22,7 +22,7 @@
                     <td>{{ customer.phone }}</td>
                 </tr>
             </table>
-            <router-link to="/dashboard">Voltar</router-link>
+            <router-link to="/listar-clientes">Voltar</router-link>
         </div>
     </div>
 </template>
