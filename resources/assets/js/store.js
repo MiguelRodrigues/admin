@@ -9,6 +9,7 @@ export default {
         loading: false,
         auth_error: null,
         customers: [],
+        users: [],
         componentOpen: false
     },
     getters: {
@@ -26,6 +27,9 @@ export default {
         },
         customers(state) {
             return state.customers;
+        },
+        users(state) {
+            return state.users;
         },
         componentOpen(state){
             return state.componentOpen;
@@ -56,6 +60,9 @@ export default {
         updateCustomers(state, payload) {
             state.customers = payload;
         },
+        updateUsers(state, payload) {
+            state.users = payload;
+        },
         toogleComponent(state){
             if(!state.componentOpen){
                 state.componentOpen = true;
@@ -73,7 +80,6 @@ export default {
             context.commit("login");
         },
         getCustomers(context) {
-            console.log(context.state.currentUser)
             axios.get('/api/customers',{
                 headers:{
                     "Authorization": `Bearer ${context.state.currentUser.token}`
@@ -81,6 +87,16 @@ export default {
             })
             .then((response) => {
                 context.commit('updateCustomers', response.data.customers);
+            })
+        },
+        getUsers(context) {
+            axios.get('/api/users',{
+                headers:{
+                    "Authorization": `Bearer ${context.state.currentUser.token}`
+                }
+            })
+            .then((response) => {
+                context.commit('updateUsers', response.data.users);
             })
         }
     }

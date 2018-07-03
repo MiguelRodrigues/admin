@@ -1,12 +1,17 @@
 import Home from './components/Home.vue';
 import MainApp from './components/MainApp.vue';
-
+//Auth routes
 import Login from './components/auth/Login.vue';
+import Register from './components/auth/Register.vue';
+import UsersList from './components/auth/ListUsers.vue';
+
+
 import CustomersMain from './components/customers/Main.vue';
 import CustomersList from './components/customers/List.vue';
 import NewCustomer from './components/customers/New.vue';
 import EditCustomer from './components/customers/Edit.vue';
 import Customer from './components/customers/View.vue';
+
 
 export const routes=[
     {
@@ -27,6 +32,20 @@ export const routes=[
         {
         path:'/listar-clientes', 
         component: CustomersList,
+        meta: {
+            requiresAuth:true
+        }
+    },
+    {
+        path:'/registar-utilizador', 
+        component: Register,
+        meta: {
+            requiresAuth:true
+        }
+    },
+    {
+        path:'/listar-utilizadores', 
+        component: UsersList,
         meta: {
             requiresAuth:true
         }

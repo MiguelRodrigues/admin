@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateUserRequest;
+use Validator, DB, Hash, Mail;
+use App\User;
+
 
 class AuthController extends Controller
 {
@@ -85,5 +89,39 @@ class AuthController extends Controller
     }
     public function guard(){
         return \Auth::Guard('api');
+    }
+
+    public function allUsers()
+    {
+        $users = User::all();
+        return response()->json([
+            "users" => $users
+        ], 200);
+    }
+
+    public function register(CreateUserRequest $request)
+    {
+        $credentials = $request->only('name', 'email', 'password');
+
+        $rules = [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users'
+        ];
+
+        $validator = Validator::make($credentials, $rules);
+
+        if($validator->fails()) {
+            return response()->json(['success'=> false, 'error'=> $validator->messages()]);
+        }
+
+        $name = $request->name;
+        $email = $request->email;
+        $password = $request->password;
+        
+        $user = User::create(['name' => $name, 'email' => $email, 'password' => Hash::make($password)]);
+
+        return response()->json([
+            "user" => $user
+        ], 200);
     }
 }

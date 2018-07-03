@@ -26,6 +26,12 @@
                     <router-link :to="`/listar-clientes`" class="btn btn-success">Clientes</router-link>
                 </li>
                 <li>
+                    <router-link :to="`/registar-utilizador`" class="btn btn-success">Novo utilizador</router-link>
+                </li>
+                <li>
+                    <router-link :to="`/listar-utilizadores`" class="btn btn-success">Utilizadores</router-link>
+                </li>
+                <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>

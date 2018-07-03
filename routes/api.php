@@ -28,4 +28,6 @@ Route::group(['middleware' => 'jwt.auth'], function ($router) {
     Route::post('customers/new', 'CustomersController@new');
     Route::post('customers/edit/{id}', 'CustomersController@edit');
     Route::post('customers/delete/{id}', 'CustomersController@delete');
+    Route::post('register', 'AuthController@register');
+    Route::get('users', 'AuthController@allUsers');
 });
