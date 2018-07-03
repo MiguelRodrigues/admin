@@ -52662,19 +52662,22 @@ var index_esm = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_auth_ListUsers_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_auth_ListUsers_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_auth_ViewUser_vue__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_auth_ViewUser_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_auth_ViewUser_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_customers_Main_vue__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_customers_Main_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_customers_Main_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_customers_List_vue__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_customers_List_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_customers_List_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_customers_New_vue__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_customers_New_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_customers_New_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_customers_Edit_vue__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_customers_Edit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_customers_Edit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_customers_View_vue__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_customers_View_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_customers_View_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_auth_EditUser_vue__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_auth_EditUser_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_auth_EditUser_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_customers_Main_vue__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_customers_Main_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_customers_Main_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_customers_List_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_customers_List_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_customers_List_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_customers_New_vue__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_customers_New_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_customers_New_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_customers_Edit_vue__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_customers_Edit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_customers_Edit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_customers_View_vue__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_customers_View_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_customers_View_vue__);
 
 
 //Auth routes
+
 
 
 
@@ -52702,7 +52705,7 @@ var routes = [{
 // },
 {
     path: '/listar-clientes',
-    component: __WEBPACK_IMPORTED_MODULE_7__components_customers_List_vue___default.a,
+    component: __WEBPACK_IMPORTED_MODULE_8__components_customers_List_vue___default.a,
     meta: {
         requiresAuth: true
     }
@@ -52725,23 +52728,29 @@ var routes = [{
         requiresAuth: true
     }
 }, {
+    path: '/ver-utilizador/edit/:id',
+    component: __WEBPACK_IMPORTED_MODULE_6__components_auth_EditUser_vue___default.a,
+    meta: {
+        requiresAuth: true
+    }
+}, {
     path: '/customers',
-    component: __WEBPACK_IMPORTED_MODULE_6__components_customers_Main_vue___default.a,
+    component: __WEBPACK_IMPORTED_MODULE_7__components_customers_Main_vue___default.a,
     meta: {
         requiresAuth: true
     },
     children: [{
         path: '/',
-        component: __WEBPACK_IMPORTED_MODULE_7__components_customers_List_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_8__components_customers_List_vue___default.a
     }, {
         path: 'new',
-        component: __WEBPACK_IMPORTED_MODULE_8__components_customers_New_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_9__components_customers_New_vue___default.a
     }, {
         path: ':id',
-        component: __WEBPACK_IMPORTED_MODULE_10__components_customers_View_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_11__components_customers_View_vue___default.a
     }, {
         path: 'edit/:id',
-        component: __WEBPACK_IMPORTED_MODULE_9__components_customers_Edit_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_10__components_customers_Edit_vue___default.a
     }]
 }];
 
@@ -53442,7 +53451,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-wrapper[data-v-16525708] {\n    text-align: right;\n    margin-bottom: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.btn-wrapper[data-v-16525708] {\r\n    text-align: right;\r\n    margin-bottom: 20px;\n}\r\n", ""]);
 
 // exports
 
@@ -54112,7 +54121,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.error[data-v-5383a42c] {\n    text-align: center;\n    color: red;\n}\n", ""]);
+exports.push([module.i, "\n.error[data-v-5383a42c] {\r\n    text-align: center;\r\n    color: red;\n}\r\n", ""]);
 
 // exports
 
@@ -54404,7 +54413,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.errors {\n    background: lightcoral;\n    border-radius:5px;\n    padding: 21px 0 2px 0;\n}\n", ""]);
+exports.push([module.i, "\n.errors {\r\n    background: lightcoral;\r\n    border-radius:5px;\r\n    padding: 21px 0 2px 0;\n}\r\n", ""]);
 
 // exports
 
@@ -54817,6 +54826,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'userList',
@@ -54896,6 +54908,21 @@ var render = function() {
                           attrs: { to: "/ver-utilizador/" + user.id }
                         },
                         [_vm._v("Ver")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "btn btn-success",
+                          attrs: { to: "/ver-utilizador/edit/" + user.id }
+                        },
+                        [_vm._v("Editar")]
                       )
                     ],
                     1
@@ -55841,7 +55868,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             axios.post('/api/customers/edit/' + this.$route.params.id, this.$data.customer, this.$route.params.id).then(function (response) {
                 _this2.$store.dispatch('getCustomers');
-                _this2.$router.push('/dashboard');
+                _this2.$router.push('/listar-clientes');
             });
         },
         getConstraints: function getConstraints() {
@@ -56377,6 +56404,342 @@ var user = Object(__WEBPACK_IMPORTED_MODULE_0__helpers_auth__["a" /* getLocalUse
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(113)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(115)
+/* template */
+var __vue_template__ = __webpack_require__(116)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\auth\\EditUser.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4fdf0682", Component.options)
+  } else {
+    hotAPI.reload("data-v-4fdf0682", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(114);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("d267011c", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4fdf0682\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditUser.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4fdf0682\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditUser.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.errors {\r\n    background: lightcoral;\r\n    border-radius:5px;\r\n    padding: 21px 0 2px 0;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_validate_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_validate_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_validate_js__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    created: function created() {
+        var _this = this;
+
+        if (this.users.length) {
+            console.log("OLA");
+            this.user = this.users.find(function (user) {
+                return user.id == _this.$route.params.id;
+            });
+        }
+    },
+    data: function data() {
+        return {
+            user: {
+                name: '',
+                email: ''
+            },
+            errors: null
+        };
+    },
+
+    computed: {
+        currentUser: function currentUser() {
+            return this.$store.getters.currentUser;
+        },
+        users: function users() {
+            return this.$store.getters.users;
+        }
+    },
+    methods: {
+        edit: function edit() {
+            var _this2 = this;
+
+            this.errors = null;
+            var constraints = this.getConstraints();
+            var errors = __WEBPACK_IMPORTED_MODULE_0_validate_js___default()(this.$data.user, constraints);
+            if (errors) {
+                this.errors = errors;
+                return;
+            }
+            axios.post('/api/users/edit/' + this.$route.params.id, this.$data.user, this.$route.params.id).then(function (response) {
+                _this2.$store.dispatch('getUsers');
+                _this2.$router.push('/listar-utilizadores');
+            });
+        },
+        getConstraints: function getConstraints() {
+            return {
+                name: {
+                    presence: true,
+                    length: {
+                        minimum: 3,
+                        message: 'Tem de ter pelo menos 3 caracteres'
+                    }
+                },
+                email: {
+                    presence: true,
+                    email: true
+                }
+            };
+        }
+    }
+});
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "customer-new" }, [
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.edit($event)
+          }
+        }
+      },
+      [
+        _c("table", { staticClass: "table" }, [
+          _c("tr", [
+            _c("th", [_vm._v("Nome")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user.name,
+                    expression: "user.name"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "User Name" },
+                domProps: { value: _vm.user.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user, "name", $event.target.value)
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Email")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.user.email,
+                    expression: "user.email"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "email", placeholder: "User Email" },
+                domProps: { value: _vm.user.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user, "email", $event.target.value)
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c(
+              "td",
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "btn", attrs: { to: "/listar-clientes" } },
+                  [_vm._v("Cancelar")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _vm.errors
+      ? _c("div", { staticClass: "errors" }, [
+          _c(
+            "ul",
+            _vm._l(_vm.errors, function(fieldsError, fieldName) {
+              return _c("li", { key: fieldName }, [
+                _c("strong", [_vm._v(_vm._s(fieldName))]),
+                _vm._v(" " + _vm._s(fieldsError.join("\n")) + "\n            ")
+              ])
+            })
+          )
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "text-right" }, [
+      _c("input", {
+        staticClass: "btn btn-primary",
+        attrs: { type: "submit", value: "Editar" }
+      })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4fdf0682", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

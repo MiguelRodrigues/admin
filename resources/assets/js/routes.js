@@ -5,6 +5,7 @@ import Login from './components/auth/Login.vue';
 import Register from './components/auth/Register.vue';
 import UsersList from './components/auth/ListUsers.vue';
 import User from './components/auth/ViewUser.vue';
+import EditUser from './components/auth/EditUser.vue';
 
 
 import CustomersMain from './components/customers/Main.vue';
@@ -54,6 +55,13 @@ export const routes=[
     {
         path:'/ver-utilizador/:id', 
         component: User,
+        meta: {
+            requiresAuth:true
+        }
+    },
+    {
+        path:'/ver-utilizador/edit/:id', 
+        component: EditUser,
         meta: {
             requiresAuth:true
         }

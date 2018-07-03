@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\EditUserRequest;
 use Validator, DB, Hash, Mail;
 use App\User;
 
@@ -127,6 +128,20 @@ class AuthController extends Controller
         $password = $request->password;
         
         $user = User::create(['name' => $name, 'email' => $email, 'password' => Hash::make($password)]);
+
+        return response()->json([
+            "user" => $user
+        ], 200);
+    }
+    public function edit(EditUserRequest $request, $id)
+    {
+       
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $user->password;
+        $user->save();
+        
 
         return response()->json([
             "user" => $user

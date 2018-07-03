@@ -33,4 +33,5 @@ Route::group(['middleware' => 'jwt.auth'], function ($router) {
     Route::post('register', 'AuthController@register');
     Route::get('users', 'AuthController@allUsers');
     Route::get('users/{id}', 'AuthController@get');
+    Route::post('users/edit/{id}', 'AuthController@edit');
 });
