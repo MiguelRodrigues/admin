@@ -20,7 +20,7 @@
                     </tr>
                 </template>
                 <template v-else>
-                    <tr v-for="customer in customers" :key="customer.id">
+                    <tr v-for="user in users" :key="user.id">
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>
@@ -46,6 +46,9 @@
             return {
                 user: {
                     id:'',
+                    name:'',
+                    email:'',
+                   
                 }
             };
         },

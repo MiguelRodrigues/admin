@@ -56029,7 +56029,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             user: {
-                id: ''
+                id: '',
+                name: '',
+                email: ''
+
             }
         };
     },
@@ -56083,11 +56086,11 @@ var render = function() {
         [
           !_vm.users.length
             ? [_vm._m(1)]
-            : _vm._l(_vm.customers, function(customer) {
-                return _c("tr", { key: customer.id }, [
-                  _c("td", [_vm._v(_vm._s(_vm.user.name))]),
+            : _vm._l(_vm.users, function(user) {
+                return _c("tr", { key: user.id }, [
+                  _c("td", [_vm._v(_vm._s(user.name))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(_vm.user.email))]),
+                  _c("td", [_vm._v(_vm._s(user.email))]),
                   _vm._v(" "),
                   _c("td", [_c("router-link", [_vm._v("Ver")])], 1),
                   _vm._v(" "),
