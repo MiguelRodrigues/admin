@@ -53114,21 +53114,6 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "btn btn-success",
-                        attrs: { to: "/registar-utilizador" }
-                      },
-                      [_vm._v("Novo utilizador")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "btn btn-success",
                         attrs: { to: "/listar-utilizadores" }
                       },
                       [_vm._v("Utilizadores")]

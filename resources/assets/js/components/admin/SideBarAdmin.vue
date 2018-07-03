@@ -26,9 +26,6 @@
                     <router-link :to="`/listar-clientes`" class="btn btn-success">Clientes</router-link>
                 </li>
                 <li>
-                    <router-link :to="`/registar-utilizador`" class="btn btn-success">Novo utilizador</router-link>
-                </li>
-                <li>
                     <router-link :to="`/listar-utilizadores`" class="btn btn-success">Utilizadores</router-link>
                 </li>
                 <li>
