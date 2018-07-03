@@ -17,7 +17,16 @@
 
 
 <script>
+    import Header from './Header.vue';
+    import SideBar from './admin/SideBarAdmin.vue';
+    import TopBar from './admin/TopBarAdmin.vue';
 export default {
+
+      components: {
+          Header, 
+          SideBar, 
+          TopBar 
+          },
       name: 'home',
       computed: {
             title() {
