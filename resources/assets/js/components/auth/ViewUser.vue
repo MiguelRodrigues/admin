@@ -1,5 +1,5 @@
 <template>
-    <div class="customer-view" v-if="customer">
+    <div class="customer-view" v-if="user">
         <div class="user-img">
             <img src="https://www.scottsdaleazestateplanning.com/wp-content/uploads/2018/01/user.png" alt="">
         </div>
@@ -28,7 +28,7 @@
         name: 'viewUsers',
         created() {
             if (this.users.length) {
-                this.customer = this.users.find((user) => user.id == this.$route.params.id);
+                this.user = this.users.find((user) => user.id == this.$route.params.id);
             } else {
                 axios.get(`/api/customers/${this.$route.params.id}`)
                     .then((response) => {
@@ -45,7 +45,7 @@
             currentUser() {
                 return this.$store.getters.currentUser;
             },
-            userss() {
+            users() {
                 return this.$store.getters.users;
             }
         }

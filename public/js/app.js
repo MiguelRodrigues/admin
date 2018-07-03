@@ -52719,7 +52719,7 @@ var routes = [{
         requiresAuth: true
     }
 }, {
-    path: '/ver-utilizador',
+    path: '/ver-utilizador/:id',
     component: __WEBPACK_IMPORTED_MODULE_5__components_auth_ViewUser_vue___default.a,
     meta: {
         requiresAuth: true
@@ -54817,9 +54817,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'userList',
@@ -54899,21 +54896,6 @@ var render = function() {
                           attrs: { to: "/ver-utilizador/" + user.id }
                         },
                         [_vm._v("Ver")]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "btn btn-info",
-                          attrs: { to: /customers/ }
-                        },
-                        [_vm._v("Editar")]
                       )
                     ],
                     1
@@ -55107,7 +55089,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         if (this.users.length) {
-            this.customer = this.users.find(function (user) {
+            this.user = this.users.find(function (user) {
                 return user.id == _this.$route.params.id;
             });
         } else {
@@ -55126,7 +55108,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         currentUser: function currentUser() {
             return this.$store.getters.currentUser;
         },
-        userss: function userss() {
+        users: function users() {
             return this.$store.getters.users;
         }
     }
@@ -55140,7 +55122,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.customer
+  return _vm.user
     ? _c("div", { staticClass: "customer-view" }, [
         _vm._m(0),
         _vm._v(" "),

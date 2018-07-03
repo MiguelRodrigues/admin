@@ -27,9 +27,6 @@
                             <router-link :to="`/ver-utilizador/${user.id}`" class="btn btn-success">Ver</router-link>
                         </td>
                         <td>
-                          <router-link :to="/customers/" class="btn btn-info">Editar</router-link>
-                        </td>
-                        <td>
                            <button @click="apagar()" class="btn btn-danger">Apagar</button>
                         </td>
                     </tr>

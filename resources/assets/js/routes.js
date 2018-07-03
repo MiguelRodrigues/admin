@@ -52,7 +52,7 @@ export const routes=[
         }
     },
     {
-        path:'/ver-utilizador', 
+        path:'/ver-utilizador/:id', 
         component: User,
         meta: {
             requiresAuth:true
