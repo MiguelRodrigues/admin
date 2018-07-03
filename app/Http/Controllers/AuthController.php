@@ -91,6 +91,14 @@ class AuthController extends Controller
         return \Auth::Guard('api');
     }
 
+    public function get($id)
+    {
+        $user = User::whereId($id)->first();
+        return response()->json([
+            "customer" => $user
+        ], 200);
+    }
+
     public function allUsers()
     {
         $users = User::all();

@@ -24,10 +24,10 @@
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>
-                            <router-link>Ver</router-link>
+                            <router-link :to="`/ver-utilizador/${user.id}`" class="btn btn-success">Ver</router-link>
                         </td>
                         <td>
-                            <router-link>Editar</router-link>
+                          <router-link :to="/customers/" class="btn btn-info">Editar</router-link>
                         </td>
                         <td>
                            <button @click="apagar()" class="btn btn-danger">Apagar</button>

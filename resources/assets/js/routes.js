@@ -4,6 +4,7 @@ import MainApp from './components/MainApp.vue';
 import Login from './components/auth/Login.vue';
 import Register from './components/auth/Register.vue';
 import UsersList from './components/auth/ListUsers.vue';
+import User from './components/auth/ViewUser.vue';
 
 
 import CustomersMain from './components/customers/Main.vue';
@@ -46,6 +47,13 @@ export const routes=[
     {
         path:'/listar-utilizadores', 
         component: UsersList,
+        meta: {
+            requiresAuth:true
+        }
+    },
+    {
+        path:'/ver-utilizador', 
+        component: User,
         meta: {
             requiresAuth:true
         }

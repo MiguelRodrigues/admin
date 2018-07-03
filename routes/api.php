@@ -23,11 +23,14 @@ Route::group(['prefix' => 'auth'],function ($router) {
 });
 
 Route::group(['middleware' => 'jwt.auth'], function ($router) {
+    //CUSTOMERS
     Route::get('customers', 'CustomersController@all');
     Route::get('customers/{id}', 'CustomersController@get');
     Route::post('customers/new', 'CustomersController@new');
     Route::post('customers/edit/{id}', 'CustomersController@edit');
     Route::post('customers/delete/{id}', 'CustomersController@delete');
+    //USERS
     Route::post('register', 'AuthController@register');
     Route::get('users', 'AuthController@allUsers');
+    Route::get('users/{id}', 'AuthController@get');
 });
