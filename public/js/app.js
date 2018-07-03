@@ -52794,14 +52794,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -53851,7 +53843,33 @@ if (false) {
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function(){},staticRenderFns:[]}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-12", staticStyle: { "text-align": "center" } },
+        [
+          _c("img", { attrs: { src: "img/honey.png" } }),
+          _vm._v(" "),
+          _c("h2", [_vm._v(_vm._s(_vm.title))]),
+          _vm._v(" "),
+          _c("h3", [_vm._v("Home.vue")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", [
+      _c("button", { on: { click: _vm.redirectLogin } }, [_vm._v("Login")])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
@@ -53871,12 +53889,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__admin_SideBarAdmin_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__admin_SideBarAdmin_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_TopBarAdmin_vue__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_TopBarAdmin_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__admin_TopBarAdmin_vue__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -53938,7 +53950,6 @@ var render = function() {
     "div",
     { attrs: { id: "main" } },
     [
-      _vm._v("\n<<<<<<< Updated upstream\n        "),
       !_vm.currentUser
         ? [_c("Header"), _vm._v(" "), _c("router-view")]
         : [
@@ -53957,11 +53968,7 @@ var render = function() {
               ],
               1
             )
-          ],
-      _vm._v(" "),
-      _vm._v("\n=======\n\n        "),
-      _c("div", { staticClass: "content" }, [_c("router-view")], 1),
-      _vm._v("\n>>>>>>> Stashed changes\n    ")
+          ]
     ],
     2
   )

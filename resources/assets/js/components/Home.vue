@@ -1,13 +1,8 @@
 <template>
   <div class="container">
-<<<<<<< Updated upstream
       <!-- <header/> -->
         <div class="row justify-content-center">
-=======
-        <Header/>
-       <div class="wrapper">
-            <div class="row justify-content-center">
->>>>>>> Stashed changes
+
                     <div class ="col-md-12" style ="text-align: center;">
                          <img src= "img/honey.png" >
                         <h2>{{ title }}</h2>
@@ -18,9 +13,6 @@
             <button @click="redirectLogin">Login</button>
         </div>
         </div>
-        
-
-    </div>
 </template>
 
 
