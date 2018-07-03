@@ -68,7 +68,7 @@
                axios.post(`/api/customers/delete/${$customerId}`,$customerId)
                     .then((response) => {
                         this.$store.dispatch('getCustomers');
-                        this.$router.push('/dashboard');
+                        this.$router.push('/listar-clientes');
                     });
             }
         }

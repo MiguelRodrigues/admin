@@ -53598,7 +53598,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             //validações em falta
             axios.post('/api/customers/delete/' + $customerId, $customerId).then(function (response) {
                 _this.$store.dispatch('getCustomers');
-                _this.$router.push('/dashboard');
+                _this.$router.push('/listar-clientes');
             });
         }
     }
