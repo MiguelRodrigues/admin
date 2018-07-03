@@ -1,31 +1,32 @@
 <template>
     <div class="customer-new">
-        <form @submit.prevent="edit">
+        <form @submit.prevent="register">
+            CRIA USERS
             <table class="table">
                 <tr>
                     <th>Nome</th>
                     <td>
-                        <input type="text" class="form-control" v-model="customer.name" placeholder="Customer Name"/>
+                        <input type="text" class="form-control" v-model="user.name" />
                     </td>
                 </tr>
                 <tr>
                     <th>Email</th>
                     <td>
-                        <input type="email" class="form-control" v-model="customer.email" placeholder="Customer Email"/>
+                        <input type="email" class="form-control" v-model="user.email" />
                     </td>
                 </tr>
                 <tr>
-                    <th>Telemovel</th>
+                    <th>Password</th>
                     <td>
-                        <input type="text" class="form-control" v-model="customer.phone" />
+                        <input type="password" class="form-control" v-model="user.password"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <router-link to="/listar-clientes" class="btn">Cancelar</router-link>
+                        <router-link to="/dashboard" class="btn">Cancel</router-link>
                     </td>
                     <td class="text-right">
-                        <input type="submit" value="Editar" class="btn btn-primary">
+                        <input type="submit" value="Create" class="btn btn-primary">
                     </td>
                 </tr>
             </table>
@@ -44,21 +45,12 @@
     import validate from 'validate.js';
     export default {
         name: 'new',
-        created() {
-                if (this.customers.length) {
-                this.customer = this.customers.find((customer) => customer.id == this.$route.params.id);
-                }
-                axios.get(`/api/customers/${this.$route.params.id}`)
-                    .then((response) => {
-                        this.customer = response.data.customer
-                });   
-        },
         data() {
             return {
-                customer: {
+                user: {
                     name: '',
                     email: '',
-                    phone: '',
+                    password: '',
                 },
                 errors: null
             };
@@ -66,24 +58,19 @@
         computed: {
             currentUser() {
                 return this.$store.getters.currentUser;
-            },
-            customers() {
-                return this.$store.getters.customers;
             }
         },
         methods: {
-            
-            edit() {
+            register() {
                 this.errors = null;
                 const constraints = this.getConstraints();
-                const errors = validate(this.$data.customer, constraints);
+                const errors = validate(this.$data.user, constraints);
                 if(errors) {
                     this.errors = errors;
                     return;
                 }
-                axios.post(`/api/customers/edit/${this.$route.params.id}`, this.$data.customer,this.$route.params.id)
+                axios.post('/api/register', this.$data.user)
                     .then((response) => {
-                        this.$store.dispatch('getCustomers');
                         this.$router.push('/dashboard');
                     });
             },
@@ -93,19 +80,18 @@
                         presence: true,
                         length: {
                             minimum: 3,
-                            message: 'Tem de ter pelo menos 3 caracteres'
+                            message: 'O nome tem de ter pelo menos 3 letras'
                         }
                     },
                     email: {
                         presence: true,
                         email: true
                     },
-                    phone: {
+                    password: {
                         presence: true,
-                        numericality: true,
                         length: {
-                            minimum: 9,
-                            message: 'Tem de ter no minimo 9 digitos'
+                            minimum: 6,
+                            message: 'A password tem de ter pelo menos 6 caracteres'
                         }
                     }
                 };
