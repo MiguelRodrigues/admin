@@ -1,14 +1,18 @@
 <template>
     <div>
         <div class="btn-wrapper">
-            <router-link to="/customers/new" class="btn btn-primary btn-sm">New</router-link>
+            <router-link to="/customers/new" class="btn btn-primary btn-sm">+ Cliente</router-link>
         </div>
         <table class="table">
             <thead>
-                <th>Name</th>
+                <th>Nome</th>
                 <th>Email</th>
-                <th>Phone</th>
-                <th>Actions</th>
+                <th>Telefone</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+
             </thead>
             <tbody>
                 <template v-if="!customers.length">
@@ -22,10 +26,10 @@
                         <td>{{ customer.email }}</td>
                         <td>{{ customer.phone }}</td>
                         <td>
-                            <router-link :to="`/customers/${customer.id}`">Ver</router-link>
+                            <router-link :to="`/customers/${customer.id}`" class="btn btn-success">Ver</router-link>
                         </td>
                         <td>
-                            <router-link :to="`/customers/edit/${customer.id}`">Editar</router-link>
+                            <router-link :to="`/customers/edit/${customer.id}`" class="btn btn-info">Editar</router-link>
                         </td>
                         <td>
                            <button @click="apagar(customer.id)" class="btn btn-danger">Apagar</button>

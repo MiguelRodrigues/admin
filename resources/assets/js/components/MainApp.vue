@@ -1,17 +1,32 @@
 <template>
     <div id="main">
-        <template v-if= false>
+        <template v-if="!currentUser">
             <Header/>
+            <!-- MAIN CONTENT -->
+            <router-view></router-view>
         </template>
 
-        <div class="wrapper">
-            <SideBar></SideBar>
-            <TopBar></TopBar>
-        </div>
+        <template v-else>
+            <div class="wrapper">
+                <SideBar></SideBar>
+
+                <!-- Page Content  -->
+                <div id="content">
+                    <TopBar></TopBar>
+
+                    <!-- MAIN CONTENT -->
+                    <router-view></router-view>
+
+                </div>
+                <!-- FIM Page Content  -->
+
+
+            </div>
+        </template>
         
-        <div class="content">
-            <router-view></router-view>
-        </div>
+        <!-- <div class="content"> -->
+            
+        <!-- </div> -->
     </div>
 </template>
 
@@ -22,7 +37,13 @@
     
 
     export default {
-        name: 'main-app',
-        components: {Header, SideBar, TopBar }
+        name: 'MainApp',
+        components: {Header, SideBar, TopBar },
+
+        computed: {
+            currentUser() {
+                return this.$store.getters.currentUser
+            }
+        }
     }
 </script>

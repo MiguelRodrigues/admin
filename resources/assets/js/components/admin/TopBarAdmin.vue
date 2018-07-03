@@ -1,7 +1,6 @@
 <template>
+	<div>
 
-	<!-- Page Content  -->
-        <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -47,55 +46,60 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Page</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
                         </ul>
                     </div> -->
                 </div>
             </nav>
 
+
+
             <!-- MAIN CONTENT -->
 
-            <button @click="showCustomers">Clientes</button>
+<!--             <button @click="showCustomers">Clientes</button>
 
             <template v-if="mostra">
-            <CustomersList></CustomersList>
-            </template>
+            	<CustomersList></CustomersList>
+            </template> -->
 
            
-  
-
-        </div>
-        <!-- FIM Page Content  -->
-
+  	</div>
 </template>
 
 <script>
+
 import CustomersList from '../customers/List.vue';;
 export default {
   
       name: 'DashBoard',
       components: {CustomersList},
-      data() {
+    //   data() {
         
-        return { 
-		      	mostra: this.$store.getters.componentOpen 
-			      }
-	  	},
+    //     return { 
+		  //     	mostra: this.$store.getters.componentOpen 
+			 //      }
+	  	// },
+
+
+
+	  	computed: {
+            currentUser() {
+                return this.$store.getters.currentUser;
+            }
+        },
 
       methods:{
         
-        showCustomers(){
-          this.$store.dispatch('toogleComponent');
-          this.mostra = this.$store.getters.componentOpen;
-          }
+      	logout() {
+                this.$store.commit('logout');
+                this.$router.push('/');
+            },
+
+
+        // showCustomers(){
+        //   this.$store.dispatch('toogleComponent');
+        //   this.mostra = this.$store.getters.componentOpen;
+        //   }
         }
 }
+
 </script>

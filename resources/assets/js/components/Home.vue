@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-      <header/>
+      <!-- <header/> -->
         <div class="row justify-content-center">
                     <div class ="col-md-12" style ="text-align: center;">
                          <img src= "img/honey.png" >
                         <h2>{{ title }}</h2>
+                        <h3>Home.vue</h3>
                     </div>
         </div>
         <div>
@@ -13,6 +14,8 @@
 
     </div>
 </template>
+
+
 <script>
 export default {
       name: 'home',

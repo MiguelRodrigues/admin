@@ -21,7 +21,7 @@
 import CostumersList from './customers/List.vue';;
 export default {
   
-      name: 'DashBoard',
+      name: 'DashBoard2',
       components: {CostumersList},
       data() {
         

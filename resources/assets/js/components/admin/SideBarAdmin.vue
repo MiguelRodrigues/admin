@@ -3,11 +3,11 @@
 	<!-- Sidebar  -->
         <nav id="sidebar" class="mCustomScrollbar _mCS_1 mCS-autoHide" style="overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: -13px; left: 0px;" dir="ltr">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>GimAdmin</h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+                <p>sub-título</p>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -23,7 +23,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <router-link :to="`/listar-clientes`" class="btn btn-success">Clientes</router-link>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
